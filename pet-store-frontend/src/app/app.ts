@@ -10,5 +10,5 @@ import { Footer } from './components/footer/footer';
   styleUrl: './app.css',
 })
 export class App {
-  protected title = 'pet-store-frontend';
+  protected title = 'Pet Store';
 }
