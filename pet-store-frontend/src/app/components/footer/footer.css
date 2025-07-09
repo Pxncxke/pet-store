@@ -1,0 +1,80 @@
+.footer-container {
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+}
+
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #374151, transparent);
+}
+
+/* Enhanced hover effects for social media icons */
+.footer-container a[aria-label] {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-container a[aria-label]:hover {
+  transform: translateY(-2px);
+}
+
+.footer-container a[aria-label]:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f3f4f6;
+  color: #111827;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 4px;
+}
+
+.footer-container a[aria-label]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #f3f4f6;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-container .max-w-md {
+    max-width: none;
+  }
+}
+
+/* Focus states for accessibility */
+.footer-container a:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth animations */
+.footer-container * {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Contact info icons */
+.footer-container svg {
+  flex-shrink: 0;
+}

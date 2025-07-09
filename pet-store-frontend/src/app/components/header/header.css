@@ -1,0 +1,98 @@
+/* Header Component Styles */
+
+/* Active link styling */
+.navbar a[routerLinkActive="active"] {
+  background-color: oklch(var(--p));
+  color: oklch(var(--pc));
+  border-radius: 0.5rem;
+}
+
+/* Smooth hover transitions for navigation links */
+.navbar .menu a {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar .menu a:hover {
+  transform: translateY(-1px);
+}
+
+/* Enhanced dropdown shadows */
+.dropdown-content {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Shopping cart badge animation */
+.indicator-item {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Avatar ring enhancement */
+.avatar .rounded-full {
+  transition: all 0.3s ease;
+}
+
+.avatar:hover .rounded-full {
+  transform: scale(1.05);
+}
+
+/* Brand logo enhancement */
+.navbar-start a {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-start a:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile menu improvements */
+@media (max-width: 1024px) {
+  .dropdown-content.menu {
+    min-width: 200px;
+  }
+}
+
+/* Subtle background pattern for the header */
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 49%,
+    rgba(255, 255, 255, 0.02) 50%,
+    transparent 51%
+  );
+  pointer-events: none;
+}
+
+/* Cart dropdown improvements */
+.card-compact .card-body {
+  padding: 1.25rem;
+}
+
+/* Button hover enhancements */
+.btn:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Badge styling improvements */
+.badge-primary {
+  background: linear-gradient(135deg, oklch(var(--p)), oklch(var(--p) / 0.8));
+  border: none;
+  font-weight: 600;
+}
